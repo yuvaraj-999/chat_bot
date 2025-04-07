@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ChatBot</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="database.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome Back</h2>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required placeholder="Password">
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p class="error-message" id="errorMsg"></p>
+            </form>
+            <p class="register-link">Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
+        </div>
+
+        <div class="register-box" style="display: none;">
+            <h2>Create Account</h2>
+            <form id="registerForm" onsubmit="return handleRegister(event)">
+                <div class="input-group">
+                    <input type="text" id="regName" required placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="regEmail" required placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPassword" required placeholder="Password">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="login-btn">Register</button>
+                <p class="error-message" id="regErrorMsg"></p>
+            </form>
+            <p class="register-link">Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

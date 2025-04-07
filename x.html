@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="database.js" defer></script>
+</head>
+
+<body>
+    <div class="chatBot">
+        <header>
+            <h2>ChatBot</h2>
+            <div class="header-controls">
+                <span class="user-info" id="userInfo"></span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+                <span class="close-btn" id="cross" onclick="cancel()">×</span>
+            </div>
+        </header>
+        <ul class="chatbox">
+            <li class="chat-incoming chat">
+                <p>Hey! How can I assist you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <button id="sendBTN">Send</button>
+        </div>
+    </div>
+    <script src="x.js" defer></script>
+</body>
+
+</html>
